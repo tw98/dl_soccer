@@ -11,6 +11,20 @@ def getTeamIdsFromMatchId(id, matches, teams):
             teamIds = list(match["teamsData"].keys())
             return teamIds
 
+def getStartingLineupAverageHeight(match, playerMap):
+    team1 = True
+    team1Height = 0
+    team2Height = 0
+    for team in match["teamsData"]:
+        for player in match["teamsData"][team]["formation"]["lineup"]:
+            playerId = player["playerId"]
+            if(team1==True):
+                team1Height+= playerMap[playerId]["height"]
+            else:
+                team2Height+= playerMap[playerId]["height"]
+        team1 = False
+    return [team1Height/11, team2Height/11]
+
 def createNewDictionary(intervals):
     eventsPer5 = {}
     for interval in intervals:
@@ -18,10 +32,7 @@ def createNewDictionary(intervals):
     return eventsPer5
 
 #output a dictionary whose keys are the matchIds and values are also dictionaries that holds the events for each 5 minute bin
-def groupEventsByMatch(eventsFileName):
-    eventsFile = open(eventsFileName)
-    events = json.load(eventsFile)
-    eventsFile.close()
+def groupEventsByMatch(events):
     intervals = ["5","10","15","20","25","30","35","40","45","45+","50","55","60","65","70","75","80","85", "90","90+"]
     prevMatchId = -1
     i = 0
@@ -109,16 +120,31 @@ def calcNumByEventType(events,teams):
 
 matchesFile = open("../matches/matches_England.json")
 matches = json.load(matchesFile)
+matchesMap = {}
+for match in matches:
+    matchesMap[match["wyId"]] = match
 matchesFile.close()
 
 teamsFile = open("../teams.json")
 teams = json.load(teamsFile)
 teamsFile.close()
 
+playersFile = open("../players.json")
+players = json.load(playersFile)
+playerMap = {}
+for player in players:
+    playerMap[player["wyId"]] =player
+playersFile.close()
 
+eventsFile = open("../events/events_England.json")
+events = json.load(eventsFile)
+eventsFile.close()
 
-eventsPerMatch = groupEventsByMatch("../events/events_England.json")
+for matchId in matchesMap:
+    print(getStartingLineupAverageHeight(matchesMap[matchId], playerMap))
+
 #going through each match, splitting up the events by event type and then calculating the number of each event in that match
+eventsPerMatch = groupEventsByMatch(events)
 for match in eventsPerMatch:
     teamIds =getTeamIdsFromMatchId(match,matches,teams)
     team1Name =teamNameFromId(int(teamIds[0]), teams)
