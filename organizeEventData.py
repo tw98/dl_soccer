@@ -5,6 +5,19 @@ def teamNameFromId(id, teams):
         if(team["wyId"]==id):
             return team["name"]
 
+def calcPercentageOfFinalThirdPasses(passes):
+    totalPasses =0
+    passesIntoFinalThird = 0
+    for p in passes:
+        totalPasses+=1
+        passPositions = p["positions"]
+        if(passPositions[0]["x"]<67 and passPositions[1]["x"] >=67):
+            passesIntoFinalThird +=1
+    if(totalPasses!=0):
+        return passesIntoFinalThird/totalPasses
+    else:
+        return 0
+
 def getTeamIdsFromMatchId(id, matches, teams):
     for match in matches:
         if(match["wyId"]==id):
@@ -71,52 +84,57 @@ def groupEventsByMatch(events):
 
 #Input: dictionary where keys are bin labels, and value is array of all events that occured in that bin
 #Output: dictionary where keys are event type (ie: shot), and value is another dictionary of all events of that type split up into bins
-def splitEventsByType(events):
-    numCorners=0
+def splitEventsByType(events, teamIds):
     intervals = ["5","10","15","20","25","30","35","40","45","45+","50","55","60","65","70","75","80","85", "90","90+"]
-    eventsByType = {"shot": createNewDictionary(intervals), "corner":createNewDictionary(intervals), "freeKickShots":createNewDictionary(intervals), "redCard":createNewDictionary(intervals),
+    team1Events = {"shot": createNewDictionary(intervals), "corner":createNewDictionary(intervals), "freeKickShots":createNewDictionary(intervals), "redCard":createNewDictionary(intervals),
         "yellowCard":createNewDictionary(intervals),
-        "offside":createNewDictionary(intervals)}
+        "passes":createNewDictionary(intervals)}
+    team2Events = {"shot": createNewDictionary(intervals), "corner":createNewDictionary(intervals), "freeKickShots":createNewDictionary(intervals), "redCard":createNewDictionary(intervals),
+        "yellowCard":createNewDictionary(intervals),
+        "passes":createNewDictionary(intervals)}
     for bin in events:
         for event in events[bin]:
             eventType = ""
-            #includes corners and corner like free kicks
+            #includes corners and "corner like" free kicks
             if(event['subEventId'] == 30 or event['subEventId'] == 32):
-                numCorners+=1
                 eventType = "corner"
             elif(event['subEventId'] == 33):
                 eventType = "freeKickShots"
             elif(event['eventId']==10):
                 eventType="shot"
-            elif(event['eventId']==6):
-                eventType="offside"
             elif(event["eventName"] =='Foul'):
+                #checking if foul resulted in red card or yellow card
                 for tag in event["tags"]:
                     if(tag["id"]==1703 or tag["id"]==1701):
                         eventType = "redCard"
                         break
                     elif(tag["id"]==1702):
                         eventType = "yellowCard"
+            elif(event['eventId']==8):
+                eventType="passes"
             if(eventType!=""):
-                eventsByType[eventType][bin].append(event)
-    return eventsByType
+                if(event["teamId"]==int(teamIds[0])):
+                    team1Events[eventType][bin].append(event)
+                else:
+                    team2Events[eventType][bin].append(event)
+    return [team1Events, team2Events]
 
 #calculates the number of event type for a match (ie: number of corners), and return a dictionary holding these values
-def calcNumByEventType(events,teams):
-    numDictTeam1 = {}
-    numDictTeam2 = {}
-    for key in events:
-        s1=0
-        s2=0
-        for bin in events[key]:
-            for event in events[key][bin]:
-                if(event["teamId"]==int(teams[0])):
-                    s1+=1
-                else:
-                    s2+=1
-        numDictTeam1[key]=s1
-        numDictTeam2[key]=s2
-    return [numDictTeam1,numDictTeam2]
+def calcNumByEventType(eventsByType):
+    numDict = {}
+    for eventType in eventsByType:
+        #when we are going through all a teams passes, we are going to calculate the percentage of passes that are passes INTO the final third
+        if(eventType=="passes"):
+            numDict["percentPassFinalThird"] = {}
+            for bin in eventsByType[eventType]:
+                passes =eventsByType[eventType][bin]
+                numDict["percentPassFinalThird"][bin] = calcPercentageOfFinalThirdPasses(passes)
+    #for all other event types, simply calculate the number of those events by the len function
+        else:
+            numDict[eventType] = {}
+            for bin in eventsByType[eventType]:
+                numDict[eventType][bin] = len(eventsByType[eventType][bin])
+    return numDict
 
 matchesFile = open("../matches/matches_England.json")
 matches = json.load(matchesFile)
@@ -140,25 +158,18 @@ eventsFile = open("../events/events_England.json")
 events = json.load(eventsFile)
 eventsFile.close()
 
-for matchId in matchesMap:
-    print(getStartingLineupAverageHeight(matchesMap[matchId], playerMap))
-
 #going through each match, splitting up the events by event type and then calculating the number of each event in that match
 eventsPerMatch = groupEventsByMatch(events)
 for match in eventsPerMatch:
     teamIds =getTeamIdsFromMatchId(match,matches,teams)
     team1Name =teamNameFromId(int(teamIds[0]), teams)
     team2Name =teamNameFromId(int(teamIds[1]), teams)
-    print(team1Name + " vs " + team2Name)
-    eventsPerMatch[match] = splitEventsByType(eventsPerMatch[match])
-    numDicts = calcNumByEventType(eventsPerMatch[match],teamIds)
-    print(team1Name)
-    for type in numDicts[0]:
-        print("Number of " + type + ": " + str(numDicts[0][type]))
-    print(team2Name)
-    for type in numDicts[1]:
-        print("Number of " + type + ": " + str(numDicts[1][type]))
-    print("---------------")
+    #print(team1Name + " vs " + team2Name)
+    eventsPerMatch[match] = splitEventsByType(eventsPerMatch[match], teamIds)
+    team1Events = eventsPerMatch[match][0]
+    team2Events = eventsPerMatch[match][1]
+    team1NumDict = calcNumByEventType(team1Events)
+    team2NumDict = calcNumByEventType(team2Events)
 
 
 
