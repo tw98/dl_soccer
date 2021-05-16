@@ -1,11 +1,23 @@
 import json
 import datetime
 from dateutil.relativedelta import relativedelta
+import math
 
 def teamNameFromId(id, teams):
     for team in teams:
         if(team["wyId"]==id):
             return team["name"]
+
+def calcAveragePassLength(passes):
+    totalPassDistance = 0
+    for p in passes:
+        passPositions = p["positions"]
+        curPassLength = math.sqrt((passPositions[1]["x"] - passPositions[0]["x"])**2 + (passPositions[1]["y"] - passPositions[0]["y"])**2)
+        totalPassDistance += curPassLength
+    if(len(passes) == 0):
+        return 0
+    return totalPassDistance/len(passes)
+
 
 def calcPercentageOfFinalThirdPasses(passes):
     totalPasses =0
@@ -155,12 +167,14 @@ def calcNumByEventType(eventsByType):
             numDict["percentPassFirstThird"] = {}
             numDict["percentPassSecondThird"] = {}
             numDict["percentPassFinalThird"] = {}
+            numDict["averagePassLength"] = {}
             for bin in eventsByType[eventType]:
                 passes =eventsByType[eventType][bin]
                 percentageByThird = calcPercentageOfFinalThirdPasses(passes)
                 numDict["percentPassFirstThird"][bin] = percentageByThird[0]
                 numDict["percentPassSecondThird"][bin] = percentageByThird[1]
                 numDict["percentPassFinalThird"][bin] =percentageByThird[2]
+                numDict["averagePassLength"][bin] = calcAveragePassLength(passes)
     #for all other event types, simply calculate the number of those events by the len function
         else:
             numDict[eventType] = {}
@@ -206,6 +220,8 @@ for match in eventsPerMatch:
     team2Events = eventsPerMatch[match][1]
     team1NumDict = calcNumByEventType(team1Events)
     team2NumDict = calcNumByEventType(team2Events)
+    print(team1Name + ": " + str(team1NumDict["averagePassLength"]))
+    print(team2Name + ": " + str(team2NumDict["averagePassLength"]))
 
 
 
