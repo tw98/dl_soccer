@@ -1,22 +1,42 @@
 import json
+import datetime
+from dateutil.relativedelta import relativedelta
+import math
 
 def teamNameFromId(id, teams):
     for team in teams:
         if(team["wyId"]==id):
             return team["name"]
 
+def calcAveragePassLength(passes):
+    totalPassDistance = 0
+    for p in passes:
+        passPositions = p["positions"]
+        curPassLength = math.sqrt((passPositions[1]["x"] - passPositions[0]["x"])**2 + (passPositions[1]["y"] - passPositions[0]["y"])**2)
+        totalPassDistance += curPassLength
+    if(len(passes) == 0):
+        return 0
+    return totalPassDistance/len(passes)
+
+
 def calcPercentageOfFinalThirdPasses(passes):
     totalPasses =0
-    passesIntoFinalThird = 0
+    passesFirstThird = 0
+    passesSecondThird = 0
+    passesFinalThird = 0
     for p in passes:
         totalPasses+=1
         passPositions = p["positions"]
-        if(passPositions[0]["x"]<67 and passPositions[1]["x"] >=67):
-            passesIntoFinalThird +=1
+        if(passPositions[1]["x"]<=33):
+            passesFirstThird +=1
+        elif(passPositions[1]["x"]>33 and passPositions[1]["x"]<=66):
+            passesSecondThird +=1
+        else:
+            passesFinalThird +=1
     if(totalPasses!=0):
-        return passesIntoFinalThird/totalPasses
+        return [passesFirstThird/totalPasses,passesSecondThird/totalPasses,passesFinalThird/totalPasses]
     else:
-        return 0
+        return [0,0,0]
 
 def getTeamIdsFromMatchId(id, matches, teams):
     for match in matches:
@@ -37,6 +57,25 @@ def getStartingLineupAverageHeight(match, playerMap):
                 team2Height+= playerMap[playerId]["height"]
         team1 = False
     return [team1Height/11, team2Height/11]
+
+def getStartingLineupAverageAge(match, playerMap):
+    team1Age = 0
+    team2Age = 0
+    team1 = True
+    matchDate = " ".join(match["date"].split()[:3])
+    matchDate = datetime.datetime.strptime(matchDate, '%B %d, %Y')
+    for team in match["teamsData"]:
+        for player in match["teamsData"][team]["formation"]["lineup"]:
+            playerId = player["playerId"]
+            playerBday = playerMap[playerId]["birthDate"]
+            playerBday = datetime.datetime.strptime(playerBday,"%Y-%m-%d")
+            age = relativedelta(matchDate, playerBday).years
+            if(team1==True):
+                team1Age+= age
+            else:
+                team2Age+= age
+        team1 = False
+    return [team1Age/11, team2Age/11]
 
 def createNewDictionary(intervals):
     eventsPer5 = {}
@@ -125,10 +164,17 @@ def calcNumByEventType(eventsByType):
     for eventType in eventsByType:
         #when we are going through all a teams passes, we are going to calculate the percentage of passes that are passes INTO the final third
         if(eventType=="passes"):
+            numDict["percentPassFirstThird"] = {}
+            numDict["percentPassSecondThird"] = {}
             numDict["percentPassFinalThird"] = {}
+            numDict["averagePassLength"] = {}
             for bin in eventsByType[eventType]:
                 passes =eventsByType[eventType][bin]
-                numDict["percentPassFinalThird"][bin] = calcPercentageOfFinalThirdPasses(passes)
+                percentageByThird = calcPercentageOfFinalThirdPasses(passes)
+                numDict["percentPassFirstThird"][bin] = percentageByThird[0]
+                numDict["percentPassSecondThird"][bin] = percentageByThird[1]
+                numDict["percentPassFinalThird"][bin] =percentageByThird[2]
+                numDict["averagePassLength"][bin] = calcAveragePassLength(passes)
     #for all other event types, simply calculate the number of those events by the len function
         else:
             numDict[eventType] = {}
@@ -141,6 +187,7 @@ matches = json.load(matchesFile)
 matchesMap = {}
 for match in matches:
     matchesMap[match["wyId"]] = match
+    print("----------------------")
 matchesFile.close()
 
 teamsFile = open("../teams.json")
@@ -165,11 +212,16 @@ for match in eventsPerMatch:
     team1Name =teamNameFromId(int(teamIds[0]), teams)
     team2Name =teamNameFromId(int(teamIds[1]), teams)
     #print(team1Name + " vs " + team2Name)
+    averageAge = getStartingLineupAverageAge(matchesMap[match], playerMap)
+    print(team1Name + ": " + str(averageAge[0]))
+    print(team2Name + ": " + str(averageAge[1]))
     eventsPerMatch[match] = splitEventsByType(eventsPerMatch[match], teamIds)
     team1Events = eventsPerMatch[match][0]
     team2Events = eventsPerMatch[match][1]
     team1NumDict = calcNumByEventType(team1Events)
     team2NumDict = calcNumByEventType(team2Events)
+    print(team1Name + ": " + str(team1NumDict["averagePassLength"]))
+    print(team2Name + ": " + str(team2NumDict["averagePassLength"]))
 
 
 
