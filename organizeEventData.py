@@ -44,38 +44,87 @@ def getTeamIdsFromMatchId(id, matches, teams):
             teamIds = list(match["teamsData"].keys())
             return teamIds
 
+# def getStartingLineupAverageHeight(match, playerMap):
+#     team1 = True
+#     team1Height = 0
+#     team2Height = 0
+#     for team in match["teamsData"]:
+#         for player in match["teamsData"][team]["formation"]["lineup"]:
+#             playerId = player["playerId"]
+#             if(team1==True):
+#                 team1Height+= playerMap[playerId]["height"]
+#             else:
+#                 team2Height+= playerMap[playerId]["height"]
+#         team1 = False
+#     return [team1Height/11, team2Height/11]
+
 def getStartingLineupAverageHeight(match, playerMap):
-    team1 = True
+
+    teamIds = list(match["teamsData"].keys())
+    for t_id in teamIds:
+        if match["teamsData"][t_id]['side'] == 'home':
+            team1_id = t_id
+        else:
+            team2_id = t_id
+
     team1Height = 0
     team2Height = 0
-    for team in match["teamsData"]:
+    for team in teamIds:
         for player in match["teamsData"][team]["formation"]["lineup"]:
             playerId = player["playerId"]
-            if(team1==True):
+            if (team == team1_id):
                 team1Height+= playerMap[playerId]["height"]
-            else:
+            elif (team == team2_id):
                 team2Height+= playerMap[playerId]["height"]
-        team1 = False
-    return [team1Height/11, team2Height/11]
+
+    return [team1_id, team1Height/11, team2_id, team2Height/11]
+
+
+# def getStartingLineupAverageAge(match, playerMap):
+#     team1Age = 0
+#     team2Age = 0
+#     team1 = True
+#     matchDate = " ".join(match["date"].split()[:3])
+#     matchDate = datetime.datetime.strptime(matchDate, '%B %d, %Y')
+#     for team in match["teamsData"]:
+#         for player in match["teamsData"][team]["formation"]["lineup"]:
+#             playerId = player["playerId"]
+#             playerBday = playerMap[playerId]["birthDate"]
+#             playerBday = datetime.datetime.strptime(playerBday,"%Y-%m-%d")
+#             age = relativedelta(matchDate, playerBday).years
+#             if(team1==True):
+#                 team1Age+= age
+#             else:
+#                 team2Age+= age
+#         team1 = False
+#     return [team1Age/11, team2Age/11]
 
 def getStartingLineupAverageAge(match, playerMap):
     team1Age = 0
     team2Age = 0
-    team1 = True
+    
+    teamIds = list(match["teamsData"].keys())
+    for t_id in teamIds:
+        if match["teamsData"][t_id]['side'] == 'home':
+            team1_id = t_id
+        else:
+            team2_id = t_id
+
     matchDate = " ".join(match["date"].split()[:3])
     matchDate = datetime.datetime.strptime(matchDate, '%B %d, %Y')
-    for team in match["teamsData"]:
+
+    for team in teamIds:
         for player in match["teamsData"][team]["formation"]["lineup"]:
             playerId = player["playerId"]
             playerBday = playerMap[playerId]["birthDate"]
             playerBday = datetime.datetime.strptime(playerBday,"%Y-%m-%d")
             age = relativedelta(matchDate, playerBday).years
-            if(team1==True):
+            if (team == team1_id):
                 team1Age+= age
-            else:
+            elif (team == team2_id):
                 team2Age+= age
-        team1 = False
-    return [team1Age/11, team2Age/11]
+
+    return [team1_id, team1Age/11, team2_id, team2Age/11]
 
 def createNewDictionary(intervals):
     eventsPer5 = {}
@@ -182,46 +231,46 @@ def calcNumByEventType(eventsByType):
                 numDict[eventType][bin] = len(eventsByType[eventType][bin])
     return numDict
 
-matchesFile = open("../matches/matches_England.json")
-matches = json.load(matchesFile)
-matchesMap = {}
-for match in matches:
-    matchesMap[match["wyId"]] = match
-    print("----------------------")
-matchesFile.close()
+# matchesFile = open("data/matches/matches_england.json")
+# matches = json.load(matchesFile)
+# matchesMap = {}
+# for match in matches:
+#     matchesMap[match["wyId"]] = match
+#     print("----------------------")
+# matchesFile.close()
 
-teamsFile = open("../teams.json")
-teams = json.load(teamsFile)
-teamsFile.close()
+# teamsFile = open("data/teams.json")
+# teams = json.load(teamsFile)
+# teamsFile.close()
 
-playersFile = open("../players.json")
-players = json.load(playersFile)
-playerMap = {}
-for player in players:
-    playerMap[player["wyId"]] =player
-playersFile.close()
+# playersFile = open("data/players.json")
+# players = json.load(playersFile)
+# playerMap = {}
+# for player in players:
+#     playerMap[player["wyId"]] =player
+# playersFile.close()
 
-eventsFile = open("../events/events_England.json")
-events = json.load(eventsFile)
-eventsFile.close()
+# eventsFile = open("data/events/events_England.json")
+# events = json.load(eventsFile)
+# eventsFile.close()
 
 #going through each match, splitting up the events by event type and then calculating the number of each event in that match
-eventsPerMatch = groupEventsByMatch(events)
-for match in eventsPerMatch:
-    teamIds =getTeamIdsFromMatchId(match,matches,teams)
-    team1Name =teamNameFromId(int(teamIds[0]), teams)
-    team2Name =teamNameFromId(int(teamIds[1]), teams)
-    #print(team1Name + " vs " + team2Name)
-    averageAge = getStartingLineupAverageAge(matchesMap[match], playerMap)
-    print(team1Name + ": " + str(averageAge[0]))
-    print(team2Name + ": " + str(averageAge[1]))
-    eventsPerMatch[match] = splitEventsByType(eventsPerMatch[match], teamIds)
-    team1Events = eventsPerMatch[match][0]
-    team2Events = eventsPerMatch[match][1]
-    team1NumDict = calcNumByEventType(team1Events)
-    team2NumDict = calcNumByEventType(team2Events)
-    print(team1Name + ": " + str(team1NumDict["averagePassLength"]))
-    print(team2Name + ": " + str(team2NumDict["averagePassLength"]))
+# eventsPerMatch = groupEventsByMatch(events)
+# for match in eventsPerMatch:
+#     teamIds =getTeamIdsFromMatchId(match,matches,teams)
+#     team1Name =teamNameFromId(int(teamIds[0]), teams)
+#     team2Name =teamNameFromId(int(teamIds[1]), teams)
+#     #print(team1Name + " vs " + team2Name)
+#     averageAge = getStartingLineupAverageAge(matchesMap[match], playerMap)
+#     print(team1Name + ": " + str(averageAge[0]))
+#     print(team2Name + ": " + str(averageAge[1]))
+#     eventsPerMatch[match] = splitEventsByType(eventsPerMatch[match], teamIds)
+#     team1Events = eventsPerMatch[match][teamIds[0]]
+#     team2Events = eventsPerMatch[match][teamIds[1]]
+#     team1NumDict = calcNumByEventType(team1Events)
+#     team2NumDict = calcNumByEventType(team2Events)
+#     print(team1Name + ": " + str(team1NumDict["averagePassLength"]))
+#     print(team2Name + ": " + str(team2NumDict["averagePassLength"]))
 
 
 
