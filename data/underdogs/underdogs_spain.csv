@@ -1,0 +1,161 @@
+winner,wyId,label,team1_id,team1_name,team2_id,team2_name,team1_goals,team2_goals,avgHome,avgAway,UnderdogMatch,HomeUnderdog,AwayUnderdog
+676,2565922,"Barcelona - Real Sociedad, 1 - 0",676,Barcelona,687,Real Sociedad,1,0,1.24,10.271428571428572,1,0,1
+0,2565925,"Atl\u00e9tico Madrid - Eibar, 2 - 2",679,Atl\u00e9tico Madrid,701,Eibar,2,2,1.6071428571428572,5.74,1,0,1
+674,2565924,"Valencia - Deportivo La Coru\u00f1a, 2 - 1",674,Valencia,677,Deportivo La Coru\u00f1a,2,1,1.3842857142857143,8.21,1,0,1
+680,2565920,"Sevilla - Deportivo Alav\u00e9s, 1 - 0",680,Sevilla,696,Deportivo Alav\u00e9s,1,0,1.44,6.974285714285714,1,0,1
+695,2565917,"Levante - Barcelona, 5 - 4",695,Levante,676,Barcelona,5,4,9.512857142857143,1.3057142857142858,1,1,0
+691,2565910,"Espanyol - M\u00e1laga, 4 - 1",691,Espanyol,683,M\u00e1laga,4,1,1.64,5.868571428571428,1,0,1
+675,2565912,"Real Madrid - Celta de Vigo, 6 - 0",675,Real Madrid,692,Celta de Vigo,6,0,1.352857142857143,8.151428571428571,1,0,1
+701,2565915,"Eibar - Las Palmas, 1 - 0",701,Eibar,714,Las Palmas,1,0,1.4142857142857141,8.165714285714285,1,0,1
+687,2565916,"Real Sociedad - Legan\u00e9s, 3 - 2",687,Real Sociedad,712,Legan\u00e9s,3,2,1.4414285714285713,7.7057142857142855,1,0,1
+676,2565884,"Barcelona - Villarreal, 5 - 1",676,Barcelona,682,Villarreal,5,1,1.292857142857143,9.88,1,0,1
+691,2565899,"Atl\u00e9tico Madrid - Espanyol, 0 - 2",679,Atl\u00e9tico Madrid,691,Espanyol,0,2,1.397142857142857,9.507142857142858,1,0,1
+0,2565902,"Celta de Vigo - Deportivo La Coru\u00f1a, 1 - 1",692,Celta de Vigo,677,Deportivo La Coru\u00f1a,1,1,1.6142857142857143,5.34,1,0,1
+684,2565893,"Real Betis - M\u00e1laga, 2 - 1",684,Real Betis,683,M\u00e1laga,2,1,1.407142857142857,8.044285714285714,1,0,1
+676,2565889,"Deportivo La Coru\u00f1a - Barcelona, 2 - 4",677,Deportivo La Coru\u00f1a,676,Barcelona,2,4,10.401428571428571,1.2771428571428571,1,1,0
+0,2565890,"Valencia - Eibar, 0 - 0",674,Valencia,701,Eibar,0,0,1.5042857142857142,6.852857142857143,1,0,1
+682,2565888,"Villarreal - Celta de Vigo, 4 - 1",682,Villarreal,692,Celta de Vigo,4,1,1.7285714285714286,4.921428571428572,1,0,1
+675,2565891,"Real Madrid - Legan\u00e9s, 2 - 1",675,Real Madrid,712,Legan\u00e9s,2,1,1.3071428571428572,9.847142857142858,1,0,1
+0,2565897,"Espanyol - Las Palmas, 1 - 1",691,Espanyol,714,Las Palmas,1,1,1.3914285714285715,8.901428571428571,1,0,1
+695,2565879,"Athletic Club - Levante, 1 - 3",678,Athletic Club,695,Levante,1,3,1.6757142857142857,5.51,1,0,1
+0,2565886,"Atl\u00e9tico Madrid - Real Betis, 0 - 0",679,Atl\u00e9tico Madrid,684,Real Betis,0,0,1.6142857142857143,5.872857142857143,1,0,1
+683,2565883,"M\u00e1laga - Real Sociedad, 2 - 0",683,M\u00e1laga,687,Real Sociedad,2,0,5.064285714285714,1.74,1,1,0
+684,2565877,"Real Betis - Las Palmas, 1 - 0",684,Real Betis,714,Las Palmas,1,0,1.3642857142857143,7.707142857142857,1,0,1
+0,2565876,"Real Madrid - Athletic Club, 1 - 1",675,Real Madrid,678,Athletic Club,1,1,1.23,11.75,1,0,1
+698,2565875,"Valencia - Getafe, 1 - 2",674,Valencia,698,Getafe,1,2,1.487142857142857,7.398571428571429,1,0,1
+682,2565872,"Villarreal - Legan\u00e9s, 2 - 1",682,Villarreal,712,Legan\u00e9s,2,1,1.5942857142857143,6.261428571428572,1,0,1
+0,2565874,"Celta de Vigo - Barcelona, 2 - 2",692,Celta de Vigo,676,Barcelona,2,2,4.7214285714285715,1.6742857142857142,1,1,0
+675,2565867,"M\u00e1laga - Real Madrid, 1 - 2",683,M\u00e1laga,675,Real Madrid,1,2,10.322857142857142,1.2871428571428571,1,1,0
+679,2565860,"Atl\u00e9tico Madrid - Levante, 3 - 0",679,Atl\u00e9tico Madrid,695,Levante,3,0,1.2314285714285713,15.5,1,0,1
+696,2565865,"Eibar - Deportivo Alav\u00e9s, 0 - 1",701,Eibar,696,Deportivo Alav\u00e9s,0,1,1.8285714285714287,4.845714285714285,1,0,1
+677,2565863,"Athletic Club - Deportivo La Coru\u00f1a, 2 - 3",678,Athletic Club,677,Deportivo La Coru\u00f1a,2,3,1.667142857142857,5.511428571428572,1,0,1
+676,2565858,"Barcelona - Valencia, 2 - 1",676,Barcelona,674,Valencia,2,1,1.3014285714285714,9.52142857142857,1,0,1
+674,2565851,"Valencia - Espanyol, 1 - 0",674,Valencia,691,Espanyol,1,0,1.49,7.067142857142857,1,0,1
+0,2565852,"Real Madrid - Atl\u00e9tico Madrid, 1 - 1",675,Real Madrid,679,Atl\u00e9tico Madrid,1,1,1.7342857142857142,4.837142857142857,1,0,1
+676,2565856,"Barcelona - Legan\u00e9s, 3 - 1",676,Barcelona,712,Legan\u00e9s,3,1,1.1257142857142857,24.437142857142856,1,0,1
+679,2565839,"Atl\u00e9tico Madrid - Deportivo La Coru\u00f1a, 1 - 0",679,Atl\u00e9tico Madrid,677,Deportivo La Coru\u00f1a,1,0,1.2314285714285713,13.617142857142857,1,0,1
+675,2565847,"Las Palmas - Real Madrid, 0 - 3",714,Las Palmas,675,Real Madrid,0,3,9.272857142857143,1.2771428571428571,1,1,0
+0,2565843,"Girona - Levante, 1 - 1",756,Girona,695,Levante,1,1,1.6142857142857143,5.831428571428571,1,0,1
+675,2565836,"Real Madrid - Girona, 6 - 3",675,Real Madrid,756,Girona,6,3,1.187142857142857,13.64,1,0,1
+0,2565834,"Celta de Vigo - M\u00e1laga, 0 - 0",692,Celta de Vigo,683,M\u00e1laga,0,0,1.4742857142857142,7.05,1,0,1
+676,2565830,"Barcelona - Athletic Club, 2 - 0",676,Barcelona,678,Athletic Club,2,0,1.1485714285714286,20.68285714285714,1,0,1
+698,2565828,"Real Sociedad - Getafe, 1 - 2",687,Real Sociedad,698,Getafe,1,2,1.7242857142857142,5.015714285714286,1,0,1
+674,2565835,"Valencia - Deportivo Alav\u00e9s, 3 - 1",674,Valencia,696,Deportivo Alav\u00e9s,3,1,1.4414285714285713,7.425714285714286,1,0,1
+679,2565824,"Atl\u00e9tico Madrid - Celta de Vigo, 3 - 0",679,Atl\u00e9tico Madrid,692,Celta de Vigo,3,0,1.4085714285714286,8.152857142857142,1,0,1
+676,2565820,"M\u00e1laga - Barcelona, 0 - 2",683,M\u00e1laga,676,Barcelona,0,2,12.702857142857143,1.252857142857143,1,1,0
+695,2565825,"Getafe - Levante, 0 - 1",698,Getafe,695,Levante,0,1,1.7214285714285713,5.5,1,0,1
+675,2565818,"Eibar - Real Madrid, 1 - 2",701,Eibar,675,Real Madrid,1,2,5.961428571428572,1.52,1,1,0
+756,2565827,"Girona - Deportivo La Coru\u00f1a, 2 - 0",756,Girona,677,Deportivo La Coru\u00f1a,2,0,1.5971428571428572,5.732857142857143,1,0,1
+692,2565813,"Celta de Vigo - Las Palmas, 2 - 1",692,Celta de Vigo,714,Las Palmas,2,1,1.437142857142857,7.214285714285714,1,0,1
+674,2565811,"Valencia - Real Betis, 2 - 0",674,Valencia,684,Real Betis,2,0,1.46,6.357142857142857,1,0,1
+687,2565815,"Real Sociedad - Deportivo Alav\u00e9s, 2 - 1",687,Real Sociedad,696,Deportivo Alav\u00e9s,2,1,1.6828571428571428,5.148571428571429,1,0,1
+676,2565817,"Barcelona - Atl\u00e9tico Madrid, 1 - 0",676,Barcelona,679,Atl\u00e9tico Madrid,1,0,1.7242857142857142,4.881428571428572,1,0,1
+675,2565812,"Real Madrid - Getafe, 3 - 1",675,Real Madrid,698,Getafe,3,1,1.217142857142857,12.628571428571428,1,0,1
+680,2565814,"Sevilla - Athletic Club, 2 - 0",680,Sevilla,678,Athletic Club,2,0,1.7328571428571429,4.96,1,0,1
+696,2565798,"Deportivo Alav\u00e9s - Levante, 1 - 0",696,Deportivo Alav\u00e9s,695,Levante,1,0,1.7957142857142858,4.928571428571429,1,0,1
+0,2565807,"Las Palmas - Barcelona, 1 - 1",714,Las Palmas,676,Barcelona,1,1,13.39,1.197142857142857,1,1,0
+679,2565800,"Atl\u00e9tico Madrid - Legan\u00e9s, 4 - 0",679,Atl\u00e9tico Madrid,712,Legan\u00e9s,4,0,1.2485714285714287,16.821428571428573,1,0,1
+691,2565799,"Espanyol - Real Madrid, 1 - 0",691,Espanyol,675,Real Madrid,1,0,6.1414285714285715,1.532857142857143,1,1,0
+674,2565795,"Valencia - Real Sociedad, 2 - 1",674,Valencia,687,Real Sociedad,2,1,1.6914285714285713,4.7299999999999995,1,0,1
+678,2565788,"Athletic Club - M\u00e1laga, 2 - 1",678,Athletic Club,683,M\u00e1laga,2,1,1.6985714285714286,5.464285714285714,1,0,1
+676,2565791,"Barcelona - Girona, 6 - 1",676,Barcelona,756,Girona,6,1,1.1414285714285712,19.107142857142858,1,0,1
+675,2565796,"Real Madrid - Deportivo Alav\u00e9s, 4 - 0",675,Real Madrid,696,Deportivo Alav\u00e9s,4,0,1.1457142857142857,17.12857142857143,1,0,1
+675,2565707,"Legan\u00e9s - Real Madrid, 1 - 3",712,Legan\u00e9s,675,Real Madrid,1,3,11.271428571428572,1.2742857142857142,1,1,0
+675,2565780,"Real Betis - Real Madrid, 3 - 5",684,Real Betis,675,Real Madrid,3,5,8.235714285714286,1.3314285714285714,1,1,0
+679,2565787,"Atl\u00e9tico Madrid - Athletic Club, 2 - 0",679,Atl\u00e9tico Madrid,678,Athletic Club,2,0,1.4357142857142857,8.852857142857143,1,0,1
+687,2565783,"Real Sociedad - Levante, 3 - 0",687,Real Sociedad,695,Levante,3,0,1.5985714285714285,5.462857142857143,1,0,1
+676,2565781,"Eibar - Barcelona, 0 - 2",701,Eibar,676,Barcelona,0,2,6.692857142857143,1.4814285714285713,1,1,0
+674,2565771,"Valencia - Levante, 3 - 1",674,Valencia,695,Levante,3,1,1.51,6.2785714285714285,1,0,1
+0,2565777,"Barcelona - Getafe, 0 - 0",676,Barcelona,698,Getafe,0,0,1.11,21.5,1,0,1
+680,2565775,"Sevilla - Girona, 1 - 0",680,Sevilla,756,Girona,1,0,1.6828571428571428,4.912857142857143,1,0,1
+675,2565772,"Real Madrid - Real Sociedad, 5 - 2",675,Real Madrid,687,Real Sociedad,5,2,1.2314285714285713,10.464285714285714,1,0,1
+679,2565776,"M\u00e1laga - Atl\u00e9tico Madrid, 0 - 1",683,M\u00e1laga,679,Atl\u00e9tico Madrid,0,1,6.944285714285714,1.5742857142857143,1,1,0
+696,2565769,"Villarreal - Deportivo Alav\u00e9s, 1 - 2",682,Villarreal,696,Deportivo Alav\u00e9s,1,2,1.6742857142857142,5.355714285714286,1,0,1
+0,2565774,"Athletic Club - Las Palmas, 0 - 0",678,Athletic Club,714,Las Palmas,0,0,1.4528571428571428,7.115714285714286,1,0,1
+679,2565760,"Atl\u00e9tico Madrid - Valencia, 1 - 0",679,Atl\u00e9tico Madrid,674,Valencia,1,0,1.4928571428571429,6.9471428571428575,1,0,1
+0,2565759,"Espanyol - Barcelona, 1 - 1",691,Espanyol,676,Barcelona,1,1,9.242857142857142,1.34,1,1,0
+0,2565766,"Levante - Real Madrid, 2 - 2",695,Levante,675,Real Madrid,2,2,13.685714285714285,1.2042857142857142,1,1,0
+687,2565765,"Real Sociedad - Deportivo La Coru\u00f1a, 5 - 0",687,Real Sociedad,677,Deportivo La Coru\u00f1a,5,0,1.5,6.321428571428571,1,0,1
+676,2565754,"Barcelona - Deportivo Alav\u00e9s, 2 - 1",676,Barcelona,696,Deportivo Alav\u00e9s,2,1,1.0857142857142859,28.214285714285715,1,0,1
+0,2565752,"Sevilla - Getafe, 1 - 1",680,Sevilla,698,Getafe,1,1,1.5171428571428571,6.43,1,0,1
+675,2565749,"Valencia - Real Madrid, 1 - 4",674,Valencia,675,Real Madrid,1,4,4.712857142857143,1.66,1,1,0
+0,2565741,"Eibar - M\u00e1laga, 1 - 1",701,Eibar,683,M\u00e1laga,1,1,1.69,5.6085714285714285,1,0,1
+676,2565740,"Real Betis - Barcelona, 0 - 5",684,Real Betis,676,Barcelona,0,5,9.242857142857142,1.3057142857142858,1,1,0
+675,2565738,"Real Madrid - Deportivo La Coru\u00f1a, 7 - 1",675,Real Madrid,677,Deportivo La Coru\u00f1a,7,1,1.1328571428571428,18.642857142857142,1,0,1
+682,2565745,"Villarreal - Levante, 2 - 1",682,Villarreal,695,Levante,2,1,1.4742857142857142,7.231428571428571,1,0,1
+0,2565743,"Atl\u00e9tico Madrid - Girona, 1 - 1",679,Atl\u00e9tico Madrid,756,Girona,1,1,1.3642857142857143,9.547142857142857,1,0,1
+676,2565737,"Real Sociedad - Barcelona, 2 - 4",687,Real Sociedad,676,Barcelona,2,4,6.734285714285714,1.4428571428571428,1,1,0
+682,2565733,"Real Madrid - Villarreal, 0 - 1",675,Real Madrid,682,Villarreal,0,1,1.26,10.622857142857143,1,0,1
+698,2565734,"Getafe - M\u00e1laga, 1 - 0",698,Getafe,683,M\u00e1laga,1,0,1.812857142857143,4.998571428571428,1,0,1
+0,2565723,"Celta de Vigo - Real Madrid, 2 - 2",692,Celta de Vigo,675,Real Madrid,2,2,6.128571428571428,1.4942857142857142,1,1,0
+0,2565720,"Villarreal - Deportivo La Coru\u00f1a, 1 - 1",682,Villarreal,677,Deportivo La Coru\u00f1a,1,1,1.59,5.948571428571428,1,0,1
+678,2565724,"Athletic Club - Deportivo Alav\u00e9s, 2 - 0",678,Athletic Club,696,Deportivo Alav\u00e9s,2,0,1.6414285714285715,5.787142857142857,1,0,1
+676,2565718,"Barcelona - Levante, 3 - 0",676,Barcelona,695,Levante,3,0,1.052857142857143,30.572857142857142,1,0,1
+684,2565725,"Sevilla - Real Betis, 3 - 5",680,Sevilla,684,Real Betis,3,5,1.5214285714285714,6.212857142857143,1,0,1
+674,2565722,"Valencia - Girona, 2 - 1",674,Valencia,756,Girona,2,1,1.6314285714285715,5.404285714285714,1,0,1
+679,2565727,"Atl\u00e9tico Madrid - Getafe, 2 - 0",679,Atl\u00e9tico Madrid,698,Getafe,2,0,1.4,9.541428571428572,1,0,1
+691,2565717,"Espanyol - Atl\u00e9tico Madrid, 1 - 0",691,Espanyol,679,Atl\u00e9tico Madrid,1,0,5.117142857142857,1.7457142857142858,1,1,0
+676,2565704,"Barcelona - Deportivo La Coru\u00f1a, 4 - 0",676,Barcelona,677,Deportivo La Coru\u00f1a,4,0,1.0871428571428572,25.285714285714285,1,0,1
+679,2565703,"Atl\u00e9tico Madrid - Deportivo Alav\u00e9s, 1 - 0",679,Atl\u00e9tico Madrid,696,Deportivo Alav\u00e9s,1,0,1.217142857142857,16.107142857142858,1,0,1
+0,2565701,"Sevilla - Levante, 0 - 0",680,Sevilla,695,Levante,0,0,1.3085714285714287,9.768571428571429,1,0,1
+676,2565692,"Villarreal - Barcelona, 0 - 2",682,Villarreal,676,Barcelona,0,2,5.7371428571428575,1.5314285714285714,1,1,0
+679,2565697,"Real Betis - Atl\u00e9tico Madrid, 0 - 1",684,Real Betis,679,Atl\u00e9tico Madrid,0,1,4.877142857142857,1.7242857142857142,1,1,0
+683,2565688,"Real Sociedad - M\u00e1laga, 0 - 2",687,Real Sociedad,683,M\u00e1laga,0,2,1.5385714285714287,6.085714285714285,1,0,1
+674,2565694,"Valencia - Celta de Vigo, 2 - 1",674,Valencia,692,Celta de Vigo,2,1,1.6842857142857142,4.838571428571428,1,0,1
+675,2565695,"Real Madrid - Sevilla, 5 - 0",675,Real Madrid,680,Sevilla,5,0,1.3185714285714287,8.514285714285714,1,0,1
+696,2565683,"Girona - Deportivo Alav\u00e9s, 2 - 3",756,Girona,696,Deportivo Alav\u00e9s,2,3,1.64,5.77,1,0,1
+0,2565687,"Athletic Club - Real Madrid, 0 - 0",678,Athletic Club,675,Real Madrid,0,0,6.694285714285714,1.467142857142857,1,1,0
+680,2565678,"Sevilla - Deportivo La Coru\u00f1a, 2 - 0",680,Sevilla,677,Deportivo La Coru\u00f1a,2,0,1.4342857142857142,7.121428571428571,1,0,1
+679,2565680,"Atl\u00e9tico Madrid - Real Sociedad, 2 - 1",679,Atl\u00e9tico Madrid,687,Real Sociedad,2,1,1.53,6.69,1,0,1
+0,2565681,"Barcelona - Celta de Vigo, 2 - 2",676,Barcelona,692,Celta de Vigo,2,2,1.1314285714285715,19.444285714285716,1,0,1
+0,2565679,"M\u00e1laga - Levante, 0 - 0",683,M\u00e1laga,695,Levante,0,0,1.7642857142857142,4.774285714285714,1,0,1
+0,2565675,"Real Sociedad - Las Palmas, 2 - 2",687,Real Sociedad,714,Las Palmas,2,2,1.42,7.122857142857143,1,0,1
+679,2565669,"Levante - Atl\u00e9tico Madrid, 0 - 5",695,Levante,679,Atl\u00e9tico Madrid,0,5,6.9071428571428575,1.5642857142857143,1,1,0
+675,2565673,"Real Madrid - M\u00e1laga, 3 - 2",675,Real Madrid,683,M\u00e1laga,3,2,1.0871428571428572,25.145714285714284,1,0,1
+676,2565658,"Legan\u00e9s - Barcelona, 0 - 3",712,Legan\u00e9s,676,Barcelona,0,3,9.357142857142858,1.34,1,1,0
+698,2565667,"Getafe - Deportivo Alav\u00e9s, 4 - 1",698,Getafe,696,Deportivo Alav\u00e9s,4,1,1.8114285714285714,4.9157142857142855,1,0,1
+675,2565657,"Real Madrid - Las Palmas, 3 - 0",675,Real Madrid,714,Las Palmas,3,0,1.0714285714285714,25.428571428571427,1,0,1
+687,2565649,"Real Sociedad - Eibar, 3 - 1",687,Real Sociedad,701,Eibar,3,1,1.5957142857142859,5.6,1,0,1
+682,2565654,"Villarreal - M\u00e1laga, 2 - 0",682,Villarreal,683,M\u00e1laga,2,0,1.5314285714285714,6.12,1,0,1
+676,2565653,"Barcelona - Sevilla, 2 - 1",676,Barcelona,680,Sevilla,2,1,1.207142857142857,11.821428571428571,1,0,1
+674,2565656,"Valencia - Legan\u00e9s, 3 - 0",674,Valencia,712,Legan\u00e9s,3,0,1.5057142857142858,6.747142857142857,1,0,1
+756,2565644,"Girona - Real Madrid, 2 - 1",756,Girona,675,Real Madrid,2,1,11.51142857142857,1.2442857142857142,1,1,0
+680,2565639,"Sevilla - Legan\u00e9s, 2 - 1",680,Sevilla,712,Legan\u00e9s,2,1,1.6014285714285714,6.154285714285714,1,0,1
+676,2565647,"Athletic Club - Barcelona, 0 - 2",678,Athletic Club,676,Barcelona,0,2,6.878571428571429,1.4585714285714286,1,1,0
+0,2565642,"Atl\u00e9tico Madrid - Villarreal, 1 - 1",679,Atl\u00e9tico Madrid,682,Villarreal,1,1,1.53,6.862857142857143,1,0,1
+674,2565638,"Deportivo Alav\u00e9s - Valencia, 1 - 2",696,Deportivo Alav\u00e9s,674,Valencia,1,2,5.591428571428572,1.6371428571428572,1,1,0
+675,2565633,"Real Madrid - Eibar, 3 - 0",675,Real Madrid,701,Eibar,3,0,1.0914285714285714,24.12142857142857,1,0,1
+682,2565630,"Villarreal - Las Palmas, 4 - 0",682,Villarreal,714,Las Palmas,4,0,1.522857142857143,6.402857142857143,1,0,1
+676,2565629,"Barcelona - M\u00e1laga, 2 - 0",676,Barcelona,683,M\u00e1laga,2,0,1.07,29.73857142857143,1,0,1
+684,2565634,"Real Betis - Deportivo Alav\u00e9s, 2 - 0",684,Real Betis,696,Deportivo Alav\u00e9s,2,0,1.59,5.885714285714285,1,0,1
+675,2565619,"Getafe - Real Madrid, 1 - 2",698,Getafe,675,Real Madrid,1,2,10.142857142857142,1.2871428571428571,1,1,0
+0,2565625,"Espanyol - Levante, 0 - 0",691,Espanyol,695,Levante,0,0,1.7842857142857143,4.8342857142857145,1,0,1
+675,2565609,"Real Madrid - Espanyol, 2 - 0",675,Real Madrid,691,Espanyol,2,0,1.0985714285714288,22.5,1,0,1
+676,2565615,"Barcelona - Las Palmas, 3 - 0",676,Barcelona,714,Las Palmas,3,0,1.0714285714285714,27.142857142857142,1,0,1
+0,2565610,"Legan\u00e9s - Atl\u00e9tico Madrid, 0 - 0",712,Legan\u00e9s,679,Atl\u00e9tico Madrid,0,0,7.051428571428572,1.5685714285714285,1,1,0
+680,2565613,"Sevilla - M\u00e1laga, 2 - 0",680,Sevilla,683,M\u00e1laga,2,0,1.34,8.79,1,0,1
+0,2565612,"Celta de Vigo - Girona, 3 - 3",692,Celta de Vigo,756,Girona,3,3,1.7128571428571429,5.281428571428571,1,0,1
+676,2565603,"Girona - Barcelona, 0 - 3",756,Girona,676,Barcelona,0,3,12.6,1.24,1,1,0
+675,2565598,"Deportivo Alav\u00e9s - Real Madrid, 1 - 2",696,Deportivo Alav\u00e9s,675,Real Madrid,1,2,15.95,1.1785714285714286,1,1,0
+679,2565601,"Atl\u00e9tico Madrid - Sevilla, 2 - 0",679,Atl\u00e9tico Madrid,680,Sevilla,2,0,1.5971428571428572,6.008571428571429,1,0,1
+0,2565593,"Villarreal - Espanyol, 0 - 0",682,Villarreal,691,Espanyol,0,0,1.7357142857142858,5.047142857142857,1,0,1
+680,2565590,"Sevilla - Las Palmas, 1 - 0",680,Sevilla,714,Las Palmas,1,0,1.4242857142857142,7.53,1,0,1
+684,2565596,"Real Madrid - Real Betis, 0 - 1",675,Real Madrid,684,Real Betis,0,1,1.11,22.0,1,0,1
+676,2565592,"Barcelona - Eibar, 6 - 1",676,Barcelona,701,Eibar,6,1,1.1114285714285714,22.605714285714285,1,0,1
+674,2565595,"Valencia - M\u00e1laga, 5 - 0",674,Valencia,683,M\u00e1laga,5,0,1.54,6.452857142857143,1,0,1
+675,2565583,"Real Sociedad - Real Madrid, 1 - 3",687,Real Sociedad,675,Real Madrid,1,3,4.82,1.67,1,1,0
+679,2565586,"Atl\u00e9tico Madrid - M\u00e1laga, 1 - 0",679,Atl\u00e9tico Madrid,683,M\u00e1laga,1,0,1.2342857142857142,13.857142857142858,1,0,1
+676,2565580,"Getafe - Barcelona, 1 - 2",698,Getafe,676,Barcelona,1,2,11.714285714285714,1.2485714285714287,1,1,0
+692,2565573,"Celta de Vigo - Deportivo Alav\u00e9s, 1 - 0",692,Celta de Vigo,696,Deportivo Alav\u00e9s,1,0,1.7385714285714287,4.992857142857143,1,0,1
+678,2565574,"Athletic Club - Girona, 2 - 0",678,Athletic Club,756,Girona,2,0,1.687142857142857,5.261428571428572,1,0,1
+676,2565577,"Barcelona - Espanyol, 5 - 0",676,Barcelona,691,Espanyol,5,0,1.1714285714285713,17.26,1,0,1
+680,2565575,"Sevilla - Eibar, 3 - 0",680,Sevilla,701,Eibar,3,0,1.592857142857143,5.7542857142857144,1,0,1
+0,2565571,"Real Madrid - Levante, 1 - 1",675,Real Madrid,695,Levante,1,1,1.0714285714285714,31.642857142857142,1,0,1
+0,2565564,"Real Madrid - Valencia, 2 - 2",675,Real Madrid,674,Valencia,2,2,1.1685714285714286,14.857142857142858,1,0,1
+679,2565562,"Las Palmas - Atl\u00e9tico Madrid, 1 - 5",714,Las Palmas,679,Atl\u00e9tico Madrid,1,5,4.791428571428571,1.77,1,1,0
+676,2565559,"Deportivo Alav\u00e9s - Barcelona, 0 - 2",696,Deportivo Alav\u00e9s,676,Barcelona,0,2,10.15,1.3071428571428572,1,1,0
+675,2565555,"Deportivo La Coru\u00f1a - Real Madrid, 0 - 3",677,Deportivo La Coru\u00f1a,675,Real Madrid,0,3,9.501428571428571,1.3157142857142858,1,1,0
+676,2565554,"Barcelona - Real Betis, 2 - 0",676,Barcelona,684,Real Betis,2,0,1.1942857142857142,14.428571428571429,1,0,1
+0,2565550,"Athletic Club - Getafe, 0 - 0",678,Athletic Club,698,Getafe,0,0,1.5014285714285713,7.0442857142857145,1,0,1
+0,2565552,"Sevilla - Espanyol, 1 - 1",680,Sevilla,691,Espanyol,1,1,1.6185714285714285,5.768571428571429,1,0,1
+0,2565551,"Girona - Atl\u00e9tico Madrid, 2 - 2",756,Girona,679,Atl\u00e9tico Madrid,2,2,7.722857142857142,1.4685714285714286,1,1,0
